@@ -1,18 +1,29 @@
 let choices = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
-    return choices[Math.floor(Math.random() * 3)]
+    return choices[Math.floor(Math.random() * 3)];
+}
+
+function getPlayerChoice() {
+    let playerChoice = prompt("Pick rock, paper, or scissors");
+
+    if(choices.includes(playerChoice)) {
+        return playerChoice.toLowerCase();
+    } else if(playerChoice == null) {
+        return null;
+    } else {
+        return getPlayerChoice();
+    }
 }
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
     const outcomes = {"rock": {win: "scissors", lose: "paper"},
                       "paper": {win: "rock", lose: "scissors"},
                       "scissors": {win: "paper", lose: "rock"}}
 
     if(playerSelection == computerSelection) {
         console.log("You Tied! " + playerSelection + " ties with " + computerSelection);
-        return playRound(prompt("Pick rock, paper, or scissors"), getComputerChoice());
+        return playRound(getPlayerChoice(), getComputerChoice());
     } else if(outcomes[playerSelection].win == computerSelection) {
         console.log("You Win! " + playerSelection + " beats " + computerSelection);
         return 1;
@@ -22,13 +33,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//playRound(prompt("Pick rock, paper, or scissors"), getComputerChoice());
-
 function game(rounds) {
     let wins = 0;
 
     for(let i = 0; i < rounds; i++) {
-        wins += playRound(prompt("Pick rock, paper, or scissors"), getComputerChoice());
+        wins += playRound(getPlayerChoice(), getComputerChoice());
     }
 
     if(wins >= Math.ceil(rounds/2)) {
@@ -36,7 +45,6 @@ function game(rounds) {
     } else {
         console.log("You lost! you lost " + (rounds-wins) + " rounds");
     }
-    console.log(wins)
 }
 
 game(5);

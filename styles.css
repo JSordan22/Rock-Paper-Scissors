@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+:root {
+    --gray: #333840;
+    --dark-gray: #252930;
+    --light-gray: #c7cbd2;
+    --yellow: #ddb636;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Single Day', sans-serif;
+}
+
+body {
+    background-color: var(--gray);
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-gray);
+    color: var(--yellow);
+    margin: 0;
+    height: 2em;
+    font-size: 4em;
+}
+

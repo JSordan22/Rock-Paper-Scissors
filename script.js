@@ -1,4 +1,4 @@
-let choices = ["rock", "paper", "scissors"];
+/*let choices = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)];
@@ -47,4 +47,4 @@ function game(rounds) {
     }
 }
 
-game(5);
+game(5);*/

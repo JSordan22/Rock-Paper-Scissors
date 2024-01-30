@@ -10,21 +10,60 @@
 * {
     box-sizing: border-box;
     font-family: 'Single Day', sans-serif;
+    margin: 0;
 }
 
 body {
     background-color: var(--gray);
-    margin: 0;
 }
 
-h1 {
+header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--dark-gray);
     color: var(--yellow);
-    margin: 0;
-    height: 2em;
-    font-size: 4em;
+    line-height: 2em;
+    font-size: 5em;
+    margin-bottom: 1.25em;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: var(--light-gray);
+    font-size: 2em;
+    text-align: center;
+}
+
+main .instructions {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+main .instructions h2 {
+    font-size: 3em;
+}
+
+main .ui-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    width: 100vw;
+}
+
+main .ui-display .display {
+    background-color: #25293066;
+    box-shadow: rgba(3, 3, 7, 0.062) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border: 3px solid var(--dark-gray);
+    border-radius: 2em;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 1em;
+}

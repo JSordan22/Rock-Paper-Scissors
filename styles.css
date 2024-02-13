@@ -25,7 +25,7 @@ header {
     color: var(--yellow);
     line-height: 2em;
     font-size: max(3vw, 3.25em);
-    margin-bottom: 1.5em;
+    margin-bottom: 1.75em;
 }
 
 main {
@@ -36,14 +36,15 @@ main {
 }
 
 .text {
+    text-align: center;
     color: var(--light-gray);
     font-size: max(1.25vw, 1.4em);
-    text-align: center;
+    
 }
 
 main .instructions {
     text-align: center;
-    margin-bottom: 4em;
+    margin-bottom: 5em;
 }
 
 main .instructions h2 {
@@ -54,15 +55,48 @@ main .ui-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: 5em;
     width: 100vw;
+    margin-bottom: 10em;
 }
 
 main .ui-display .display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #25293066;
-    box-shadow: rgba(3, 3, 7, 0.062) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    border-radius: 2em;
-    width: max(13vw, 15em);
-    height: max(13vw, 15em);
+    /*box-shadow: rgba(3, 3, 7, 0.062) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
+    border-radius: 32px;
+    width: max(10vw, 12em);
+    height: max(10vw, 12em);
     margin-bottom: 1em;
 }
+
+main .ui-display .display img {
+    width: max(6vw, 7em);
+}
+
+main .rps-choices {
+    display: flex;
+    gap: 5em;
+}
+
+main .rps-choices .choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25293066;
+    border-radius: 16px;
+    width: max(5vw, 7em);
+    height: max(5vw, 7em);
+    cursor: pointer;
+}
+
+main .rps-choices .choice:hover {
+    background-color: #3a3e44;
+}
+
+main .rps-choices .choice-img {
+    width: max(3vw, 4em);
+}
+

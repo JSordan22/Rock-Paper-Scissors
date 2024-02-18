@@ -65,7 +65,6 @@ main .ui-display .display {
     justify-content: center;
     align-items: center;
     background-color: #25293066;
-    /*box-shadow: rgba(3, 3, 7, 0.062) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
     border-radius: 32px;
     width: max(10vw, 12em);
     height: max(10vw, 12em);
@@ -85,11 +84,11 @@ main .rps-choices .choice {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     background-color: #25293066;
     border-radius: 16px;
     width: max(5vw, 7em);
     height: max(5vw, 7em);
-    cursor: pointer;
 }
 
 main .rps-choices .choice:hover {
@@ -100,3 +99,20 @@ main .rps-choices .choice-img {
     width: max(3vw, 4em);
 }
 
+main .restart {
+    display: none;
+    background-color: #25293066;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: max(6em, 7vw);
+    height: 75px;
+}
+
+main  .restart:hover span {
+    display: none;
+}
+
+main  .restart:hover::before {
+    content: "play again?";
+}

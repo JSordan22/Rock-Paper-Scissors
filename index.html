@@ -12,34 +12,38 @@
     <main>
         <section class="instructions">
             <h2 class="text">Will you win or lose?</h2>
-            <p class="text">First to 3 points wins the game, Good Luck!</p>
+            <p class="text">first to 3 points wins the game, Good Luck!</p>
         </section>
         <section class="ui-display">
             <div class="player-display ">
                 <div class="display">
-                    <img src="">
+                    <img id="playerChoiceDisplay" src="">
                 </div>
-                <p class="text">Player: <span class="p-score">O</span></p>
+                <p class="text">player: <span id="p-score">0</span></p>
             </div>
             <p class="vs text">VS</p>
             <div class="bot-display">
                 <div class="display">
-                    <img src="">
+                    <img id="computerChoiceDisplay" src="">
                 </div>
-                <p class="text">Bot: <span class="b-score">O</span></p>
+                <p class="text">bot: <span id="c-score">0</span></p>
             </div>
         </section>
-        <section class="rps-choices">
-            <div class="rock choice">
+        <section id="choices" class="rps-choices">
+            <div id="rock" class="choice">
                 <img class="choice-img" src="Images/rock.webp" alt="Rock choice emoticon">
             </div>
-            <div class="paper choice">
+            <div id="paper" class="choice">
                 <img class="choice-img" src="Images/paper.webp" alt="Paper choice emoticon">
             </div>
-            <div class="scissors choice">
+            <div id="scissors" class="choice">
                 <img class="choice-img" src="Images/scissors.webp" alt="Scissors choice emoticon">
             </div>
+            
         </section>
+        <button id="wol" class="restart text">
+            <span id="wol-text"></span>
+        </button>
     </main>
 </body>
 </html>

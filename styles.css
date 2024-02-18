@@ -14,7 +14,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--gray);
+    height: 100vh;
 }
 
 header {
@@ -25,7 +29,6 @@ header {
     color: var(--yellow);
     line-height: 2em;
     font-size: max(3vw, 3.25em);
-    margin-bottom: 1.75em;
 }
 
 main {
@@ -33,6 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5em;
 }
 
 .text {
@@ -115,4 +119,8 @@ main  .restart:hover span {
 
 main  .restart:hover::before {
     content: "play again?";
+}
+
+footer {
+    margin-bottom: .5em;
 }
